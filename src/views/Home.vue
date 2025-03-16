@@ -7,7 +7,7 @@ const description = "I'm a passionate developer with expertise in building moder
 
 const downloadCV = () => {
   // Replace this URL with the actual URL of your CV
-  const cvUrl = '../project/src/assets/Melissa_Lacheb_CV.pdf'
+  const cvUrl = '@public/assets/Melissa_Lacheb_CV.pdf'
   const link = document.createElement('a')
   link.href = cvUrl
   link.download = 'Melissa_Lacheb_CV.pdf'
@@ -52,7 +52,7 @@ const downloadCV = () => {
 <style>
 @font-face {
   font-family: 'Brasika Display';
-  src: url('src/assets/fonts/brasika-display-trial.woff') format('woff');
+  src: url('@public/assets/fonts/brasika-display-trial.woff') format('woff');
 }
 
 .custom-font {

@@ -77,7 +77,7 @@ const mobileMenuOpen = ref(false)
 <style>
 @font-face {
   font-family: 'Brasika Display';
-  src: url('src/assets/fonts/brasika-display-trial.woff') format('woff');
+  src: url('@public/assets/fonts/brasika-display-trial.woff') format('woff');
 }
 
 .custom-font {

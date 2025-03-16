@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import forestJumpImage from '../assets/forest_jump.jpg';
-import cineQuizImage from '../assets/cine_quiz.png';
+import forestJumpImage from '@public/assets/forest_jump.jpg';
+import cineQuizImage from '@public/assets/cine_quiz.png';
 
 const projects = [
   {
