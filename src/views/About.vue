@@ -50,18 +50,58 @@ const education = [
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base font-semibold leading-7 text-indigo-600">About Me</h2>
         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Passionate Developer & Problem Solver
+          About me
         </p>
         <p class="mt-6 text-lg leading-8 text-gray-600">
-          I'm a dedicated developer with a strong foundation in both front-end and back-end technologies.
           My passion lies in creating elegant solutions to complex problems and continuously learning new technologies.
         </p>
       </div>
 
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
         <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <!-- Education -->
+          <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+              <div class="h-5 w-5 flex-none text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                </svg>
+              </div>
+              Education
+            </dt>
+            <dd class="mt-4 space-y-6">
+              <div v-for="edu in education" :key="edu.school"
+                class="relative rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900">{{ edu.degree }}</h3>
+                <p class="mt-1 text-sm text-gray-600">{{ edu.school }} | {{ edu.period }}</p>
+                <p class="mt-3 text-sm text-gray-600">{{ edu.description }}</p>
+              </div>
+            </dd>
+          </div>
+          
+
+           <!-- Experience -->
+           <div class="flex flex-col">
+            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+              <div class="h-5 w-5 flex-none text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M6 3.75A2.75 2.75 0 018.75 1h2.5A2.75 2.75 0 0114 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 016 4.193V3.75zm6.5 0v.325a41.622 41.622 0 00-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25zM10 10a1 1 0 00-1 1v.01a1 1 0 001 1h.01a1 1 0 001-1V11a1 1 0 00-1-1H10z" clip-rule="evenodd" />
+                  <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
+                </svg>
+              </div>
+              Professional Experience
+            </dt>
+            <dd class="mt-4 space-y-6">
+              <div v-for="exp in experience" :key="exp.company" 
+                class="relative rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900">{{ exp.position }}</h3>
+                <p class="mt-1 text-sm text-gray-600">{{ exp.company }} | {{ exp.period }}</p>
+                <p class="mt-3 text-sm text-gray-600">{{ exp.description }}</p>
+              </div>
+            </dd>
+          </div>
+
           <!-- Technical Skills -->
           <div class="flex flex-col">
             <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
@@ -103,46 +143,7 @@ const education = [
             </dd>
           </div>
 
-          <!-- Experience -->
-          <div class="flex flex-col">
-            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-              <div class="h-5 w-5 flex-none text-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M6 3.75A2.75 2.75 0 018.75 1h2.5A2.75 2.75 0 0114 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 016 4.193V3.75zm6.5 0v.325a41.622 41.622 0 00-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25zM10 10a1 1 0 00-1 1v.01a1 1 0 001 1h.01a1 1 0 001-1V11a1 1 0 00-1-1H10z" clip-rule="evenodd" />
-                  <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
-                </svg>
-              </div>
-              Professional Experience
-            </dt>
-            <dd class="mt-4 space-y-6">
-              <div v-for="exp in experience" :key="exp.company" 
-                class="relative rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h3 class="text-lg font-semibold text-gray-900">{{ exp.position }}</h3>
-                <p class="mt-1 text-sm text-gray-600">{{ exp.company }} | {{ exp.period }}</p>
-                <p class="mt-3 text-sm text-gray-600">{{ exp.description }}</p>
-              </div>
-            </dd>
-          </div>
-
-          <!-- Education -->
-          <div class="flex flex-col">
-            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-              <div class="h-5 w-5 flex-none text-indigo-600">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                </svg>
-              </div>
-              Education
-            </dt>
-            <dd class="mt-4 space-y-6">
-              <div v-for="edu in education" :key="edu.school"
-                class="relative rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <h3 class="text-lg font-semibold text-gray-900">{{ edu.degree }}</h3>
-                <p class="mt-1 text-sm text-gray-600">{{ edu.school }} | {{ edu.period }}</p>
-                <p class="mt-3 text-sm text-gray-600">{{ edu.description }}</p>
-              </div>
-            </dd>
-          </div>
+         
         </dl>
       </div>
     </div>
