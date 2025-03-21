@@ -30,6 +30,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set base URL in vite.config.ts
+        run: |
+          sed -i "s|base: .*|base: '/${{ github.event.repository.name }}/'|" vite.config.ts
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
